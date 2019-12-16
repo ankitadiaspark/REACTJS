@@ -6,21 +6,22 @@ class newItemForm extends Component {
       Item: "",
       Quantity: "",
       redirectToReferrer: false
-  }
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.input = React.createRef();
   }
-  handleSubmit = () => {
+  handleSubmit = event => {
+    alert("Item added successfully.");
     console.log("submitted");
+    event.preventDefault();
     this.props.history.push("/cart");
-    console.log('refs',this.refs)
-    this.setState({
-      Item: this.state.Item.value,
-      Quantity: this.state.Quantity.value,
-      redirectToReferrer: true
-  });
-  console.log('item',this.state.Item.value)
-   
+    console.log("refs", this.refs);
+    // this.setState({
+    //   Item: this.state.Item.value,
+    //   Quantity: this.state.Quantity.value,
+    //   redirectToReferrer: true
+    // });
+    // console.log("item", this.state.Item.value);
   };
 
   render() {
@@ -35,8 +36,8 @@ class newItemForm extends Component {
           Quantity:
           <input type="number" ref={this.input} />
         </label>
-        <button 
-        // type="submit"
+        <button
+          // type="submit"
           onClick={() => this.handleSubmit}
           className="btn  btn-info btn-secondary btn-sm"
         >
