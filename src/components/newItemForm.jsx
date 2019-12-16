@@ -7,9 +7,19 @@ class newItemForm extends Component {
       Quantity: "",
       redirectToReferrer: false
     };
+    this.handleChange = this.handleChange.bind(this); 
+    this.handleQuantityChange = this.handleQuantityChange.bind(this);  
     this.handleSubmit = this.handleSubmit.bind(this);
     this.input = React.createRef();
   }
+  handleChange(event) {  
+    this.setState({Item: event.target.value});  
+} 
+
+handleQuantityChange(event) {  
+  this.setState({Quantity: event.target.value});  
+} 
+
   handleSubmit = event => {
     alert("Item added successfully.");
     console.log("submitted");
@@ -21,7 +31,8 @@ class newItemForm extends Component {
     //   Quantity: this.state.Quantity.value,
     //   redirectToReferrer: true
     // });
-    // console.log("item", this.state.Item.value);
+    console.log("item", this.state.Item);
+    console.log("quantity", this.state.Quantity);
   };
 
   render() {
@@ -30,11 +41,11 @@ class newItemForm extends Component {
         <h1>Add New Item to the Cart</h1>
         <label>
           Item:
-          <input type="text" ref={this.input} />
+          <input type="text" value={this.state.Item} onChange={this.handleChange} ref={this.input} />
         </label>
         <label>
           Quantity:
-          <input type="number" ref={this.input} />
+          <input type="number" value={this.state.Quantity} onChange={this.handleQuantityChange} ref={this.input} />
         </label>
         <button
           // type="submit"
