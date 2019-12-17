@@ -84,6 +84,8 @@ class App extends Component {
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
+            onHandleChange={this.props.handleChange}
+            onHandleQuantityChange={this.props.handleQuantityChange}
             // onSubmit={this.handleSubmit}
           />
         </main>
