@@ -30,14 +30,18 @@ class App extends Component {
 
   handleAdd = () => {
     console.log("add new Item");
-    //  const Item = ReactDOM.findDOMNode(this._ItemInput).value;
-    //  const Quantity = ReactDOM.findDOMNode(this._QuantityInput).value;
+     const Item = this.props.Item;
+     const Quantity =this.props.Quantity;
     //  const errors = validate(Item,Quantity);
     //   if (errors.length > 0) {
     //     this.setState({ errors });
     //     return;
     //   }
     this.props.history.push("/newItem");
+    return (
+      Item,
+      Quantity
+      );
   };
 
   handleIncrement = counter => {
