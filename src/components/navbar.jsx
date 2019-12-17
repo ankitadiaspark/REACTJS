@@ -7,7 +7,7 @@ const NavBar = ({ totalCounters }) => {
     <nav className="navbar navbar-light bg-light">
       <a className="navbar-brand" style={{color: "white",backgroundColor: "#007bff"}} href="/#">
         Shopping Cart{""}
-        <span className="badge badge-pill badge-info">
+        <span className="badge badge-pill badge-info m-2">
           {totalCounters}
         </span>
       </a>
