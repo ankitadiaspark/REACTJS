@@ -53,12 +53,12 @@ class Counter extends Component {
           +
         </button>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        {/* <button
+        <button
           onClick={() => this.props.onDecrement(this.props.counter)}
-          className="btn btn-secondary btn-sm"
+          className="btn btn-secondary btn-sm m-2"
         >
          -
-        </button> */}
+        </button>
 
         <button
           onClick={() => this.props.onDelete(this.props.counter.id)}

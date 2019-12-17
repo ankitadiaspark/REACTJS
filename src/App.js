@@ -47,13 +47,15 @@ class App extends Component {
   };
 
   handleDecrement = decount => {
-    console.log(decount);
+
     const counters = [...this.state.counters];
     const index = counters.indexOf(decount);
     counters[index] = { ...decount };
+    if(counters[index].value>0){
     counters[index].value--;
     this.setState({ counters });
     console.log(this.state.counters[index]);
+    }
   };
 
   handleReset = () => {
