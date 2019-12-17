@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
 // import newItemForm from './components/newItemForm';
+// import fontawesome from '@fortawesome/fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import faTrashAlt from '@fortawesome/fontawesome-free-regular/';
 import "./App.css";
 
 class App extends Component {
@@ -18,6 +21,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     console.log("App-Constructor", this.props);
+    // FontAwesomeIcon.library.add(faTrashAlt);
   }
 
   componentDidMount() {
