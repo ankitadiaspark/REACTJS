@@ -96,7 +96,6 @@ class App extends Component {
             onDelete={this.handleDelete}
             onHandleChange={this.props.handleChange}
             onHandleQuantityChange={this.props.handleQuantityChange}
-            // onSubmit={this.handleSubmit}
           />
         </main>
       </React.Fragment>
