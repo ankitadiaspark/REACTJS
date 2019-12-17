@@ -25,17 +25,16 @@ class App extends Component {
   }
 
   handleAdd = () => {
-   console.log('add new Item');
-  //  const Item = ReactDOM.findDOMNode(this._ItemInput).value;
-  //  const Quantity = ReactDOM.findDOMNode(this._QuantityInput).value;
-  //  const errors = validate(Item,Quantity);
-  //   if (errors.length > 0) {
-  //     this.setState({ errors });
-  //     return;
-  //   }
-   this.props.history.push('/newItem');
+    console.log("add new Item");
+    //  const Item = ReactDOM.findDOMNode(this._ItemInput).value;
+    //  const Quantity = ReactDOM.findDOMNode(this._QuantityInput).value;
+    //  const errors = validate(Item,Quantity);
+    //   if (errors.length > 0) {
+    //     this.setState({ errors });
+    //     return;
+    //   }
+    this.props.history.push("/newItem");
   };
-
 
   handleIncrement = counter => {
     console.log(counter);
@@ -46,7 +45,6 @@ class App extends Component {
     this.setState({ counters });
     console.log(this.state.counters[index]);
   };
-
 
   handleDecrement = decount => {
     console.log(decount);
@@ -76,7 +74,6 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar
-        
           totalCounters={this.state.counters.filter(c => c.value > 0).length}
         />
         <main className="container">
