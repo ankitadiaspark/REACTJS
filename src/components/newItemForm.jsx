@@ -5,7 +5,7 @@ class newItemForm extends Component {
     this.state = {
       Item: "",
       Quantity: "",
-      redirectToReferrer: false
+      redirectToReferrer: true
     };
     this.handleChange = this.handleChange.bind(this); 
     this.handleQuantityChange = this.handleQuantityChange.bind(this);  
@@ -25,14 +25,14 @@ handleQuantityChange(event) {
     console.log("submitted");
     event.preventDefault();
     this.props.history.push("/cart");
-    console.log("refs", this.refs);
-    // this.setState({
-    //   Item: this.state.Item.value,
-    //   Quantity: this.state.Quantity.value,
-    //   redirectToReferrer: true
-    // });
+    this.setState({
+      Item: this.state.Item.value,
+      Quantity: this.state.Quantity.value,
+      redirectToReferrer: true
+    });
     console.log("item", this.state.Item);
     console.log("quantity", this.state.Quantity);
+    console.log("state",this.state);
   };
 
   render() {
