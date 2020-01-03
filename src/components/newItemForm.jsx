@@ -35,10 +35,15 @@ class newItemForm extends Component {
     console.log("state", this.state);
   };
 
+  returnData(){
+    return <React.Fragment><h5>Item:{ this.state.Item}</h5></React.Fragment>
+    
+  }
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h1>Add New Item to the Cart</h1>
+  <h1>Add New Item to the Cart:{ this.state.Quantity}</h1>
         <label>
           Item:
           <input
