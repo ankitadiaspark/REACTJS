@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import newItemForm from "./newItemForm"
 class Counter extends Component {
   // state={
   //     value:this.props.counter.value
@@ -45,7 +46,8 @@ class Counter extends Component {
     //   console.log('props',this.props);
     return (
       <div>
-        {/* <span><h3>Item</h3></span> */}
+  <span><h5>Item:{this.props.children}</h5></span>
+        
         <button
           onClick={() => this.props.onIncrement(this.props.counter)}
           className="btn btn-secondary btn-sm"
