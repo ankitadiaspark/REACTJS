@@ -58,7 +58,6 @@ class newItemForm extends Component {
           />
         </label>
         <button
-          // type="submit"
           onClick={() => this.handleSubmit}
           className="btn  btn-info btn-secondary btn-sm"
         >
